@@ -1,0 +1,7 @@
+@import '/src/variables';
+
+:host ::ng-deep main.light-theme{
+    header.header{
+        background-color: $white;
+    }
+}

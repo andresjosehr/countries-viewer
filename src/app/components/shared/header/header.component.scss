@@ -1,0 +1,56 @@
+@import '/src/variables';
+
+header.header{
+
+    padding: 15px 55px;
+    -webkit-box-shadow: 0px -5px 8px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px -5px 8px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px -5px 8px 0px rgba(0,0,0,0.75);
+    z-index: 9;
+    position: relative;
+
+    .header-container{
+        max-width: 1440px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        
+        .app-title{
+            display: table;
+            height: 43px;
+            h1{
+                margin: 0;
+                font-size: 22px;
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+        .theme-switcher{
+            display: table;
+            height: 43px;
+            img{
+                width: 20px;
+                height: 20px;
+                margin-top: 12px;
+                margin-right: 5px;
+            }
+            span{
+                display: table-cell;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+@media(max-width: 850px){
+    header.header{
+        padding: 25px 20px;
+        .header-container{
+            .app-title{
+                h1{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,102 @@
+@import '/src/variables';
+
+.container{
+    background-color: white;
+    padding: 25px 55px;
+    
+    .content{
+        max-width: 1440px;
+        margin: auto;
+        .back-box{
+            display: flex;
+            justify-content: space-between;
+            padding-top: 25px;
+            padding-bottom: 25px;
+
+            a{
+                padding: 6px 40px;
+                box-shadow: $boxShadow;
+                background-color: $white;
+                text-decoration: none;
+                color: $veryDarkBlue;
+                border-radius: 5px;
+            }
+        }
+        .country-container{
+            padding: 50px 0px;
+            height: 450px;
+            display: flex;
+            justify-content: space-between;
+            
+            .country-flag{
+                width: 45%;
+                display: table;
+                height: 450px;
+                .image-container{
+                    display: table-cell;
+                    vertical-align: middle;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            .country-info{
+                width: 45%;
+                display: table;
+                height: 450px;
+                .country-info-box{
+                    display: table-cell;
+                    vertical-align: middle;
+                    .title{
+                        h1{
+                            margin-top: 0px;
+                        }
+                    }
+                
+                    .description{
+                        display: flex;
+                        justify-content: space-between;
+                        .label-value-container{
+                            margin: 10px 0px;
+                            .label{
+                                font-weight: 600;
+                            }
+                        }
+                    }
+                    .borders{
+                        margin-top: 50px;
+                        display: flex;
+                    }
+                    .borders a{
+                        margin: 0px 8px;
+                        width: 90px;
+                        padding: 3px 0;
+                        text-align: center;
+                        box-shadow: $boxShadow;
+                        background-color: $white;
+                        text-decoration: none;
+                        color: $veryDarkBlue;
+                        border-radius: 5px;
+                        cursor: pointer;
+                    }
+                    .borders span{
+                        margin-right: 10px;
+                        display: block;
+                        margin-top: 2px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 850px){
+    .container{
+        .content{
+            .country-container{
+                display: block;
+            }
+        }
+    }
+}
+
