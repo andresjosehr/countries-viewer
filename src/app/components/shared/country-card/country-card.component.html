@@ -1,23 +1,23 @@
 <div class="card">
-    <div class="card-header"></div>
+    <div class="card-header" style="background-image: url({{country.flag}})"></div>
     <div class="card-body">
         <div class="card-title">
-            <span>Germany</span>
+            <span>{{country.name}}</span>
         </div>
         <div class="card-description">
             <div>
                 <span class="label">Population: </span>
-                <span class="value">81,770,900</span>
+                <span class="value">{{country.population}}</span>
             </div>
 
             <div>
                 <span class="label">Region: </span> 
-                <span class="value">Europe</span>
+                <span class="value">{{country.region}}</span>
             </div>
 
             <div>
                 <span class="label">Capital: </span>
-                <span class="value">Berlin</span>
+                <span class="value">{{country.capital}}</span>
             </div>
         </div>
     </div>

@@ -2,10 +2,12 @@
 
 /* Neutral */
 
-$darkBlue      : hsl(209, 23%, 22%);  //(Dark Mode Elements)
-$veryDarkBlue  : hsl(207, 26%, 17%);  //(Dark Mode Background)
-$veryDarkBlue  : hsl(200, 15%, 8%);   // (Light Mode Text)
-$darkGray      : hsl(0, 0%, 52%);     // (Light Mode Input)
-$veryLightGray : hsl(0, 0%, 98%);     // (Light Mode Background)
-$white         : hsl(0, 0%, 100%);    // (Dark Mode Text & Light Mode Elements)
-$boxShadow     : 0px 0px 5px -2px rgba(163,163,163,1);
+$darkBlue        : #2b3743;  //(Dark Mode Elements)
+$darknessBlue    : #202d36;  //(Dark Mode Elements)
+$veryDarkBlue    : hsl(207, 26%, 17%);  //(Dark Mode Background)
+$veryDarkBlue    : hsl(200, 15%, 8%);   // (Light Mode Text)
+$darkGray        : hsl(0, 0%, 52%);     // (Light Mode Input)
+$veryLightGray   : hsl(0, 0%, 98%);     // (Light Mode Background)
+$white           : hsl(0, 0%, 100%);    // (Dark Mode Text & Light Mode Elements)
+$boxShadowLight  : 0px 0px 5px -2px rgba(163,163,163,1);
+$boxShadowDark   : 0px 0px 5px -2px #131313;

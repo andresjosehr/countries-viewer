@@ -4,6 +4,8 @@ import { Router, RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
 import { HeaderModule } from '../shared/header/header.module';
 import { CountryCardModule } from '../shared/country-card/country-card.module';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {path: "", component: HomeComponent}
@@ -14,7 +16,9 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    CountryCardModule
+    CountryCardModule,
+    NgxSkeletonLoaderModule,
+    ReactiveFormsModule
     
   ]
 })

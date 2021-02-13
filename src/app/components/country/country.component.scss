@@ -1,7 +1,6 @@
 @import '/src/variables';
 
 .container{
-    background-color: white;
     padding: 25px 55px;
     
     .content{
@@ -15,15 +14,13 @@
 
             a{
                 padding: 6px 40px;
-                box-shadow: $boxShadow;
-                background-color: $white;
                 text-decoration: none;
-                color: $veryDarkBlue;
                 border-radius: 5px;
+                font-weight: 600;
             }
         }
         .country-container{
-            padding: 50px 0px;
+            padding-top: 25px;
             height: 450px;
             display: flex;
             justify-content: space-between;
@@ -57,6 +54,7 @@
                         display: flex;
                         justify-content: space-between;
                         .label-value-container{
+                            height: 20px;
                             margin: 10px 0px;
                             .label{
                                 font-weight: 600;
@@ -66,16 +64,16 @@
                     .borders{
                         margin-top: 50px;
                         display: flex;
+                        .border-text{
+                            font-weight: 600;
+                        }
                     }
                     .borders a{
                         margin: 0px 8px;
                         width: 90px;
-                        padding: 3px 0;
+                        padding: 3px 15px;
                         text-align: center;
-                        box-shadow: $boxShadow;
-                        background-color: $white;
                         text-decoration: none;
-                        color: $veryDarkBlue;
                         border-radius: 5px;
                         cursor: pointer;
                     }
@@ -95,8 +93,45 @@
         .content{
             .country-container{
                 display: block;
+                height: auto;
+                .country-flag{
+                    margin: auto;
+                    height: 100px;
+                    width: 100%;
+                    .image-container{
+                        display: block;
+                    }
+                }
+                .country-info{
+                    margin-top: 40px;
+                    width: 100%;
+                    .country-info-box{
+                        .borders a{
+                            margin: 10px 0px;
+                            width: inherit;
+                            max-width: 400px;
+                        }       
+                        .description{
+                            display: block;
+                        }
+                        .borders{
+                            display: block;
+                            .btn-borders{
+                                display: grid;
+                            }
+                            .border-text{
+                                margin-bottom: 20px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
 }
 
+@media(max-width: 600px){
+    .container{
+        padding: 15px 30px;
+    }
+}

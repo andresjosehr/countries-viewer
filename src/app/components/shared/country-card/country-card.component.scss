@@ -1,13 +1,9 @@
 @import '/src/variables';
 .card{
     width: 230px;
-    background-color: $white;
     border-radius: 5px;
-    -webkit-box-shadow: $boxShadow;
-    -moz-box-shadow: $boxShadow;
-    box-shadow: $boxShadow;
     .card-header{
-        background-image: url("https://restcountries.eu/data/afg.svg");
+        
         background-size: cover;
         width: 230px;
         height: 150px;
@@ -21,7 +17,7 @@
         padding-right: 20px;
 
         .card-title{
-            font-size: 14px;
+            font-size: 20px;
             font-weight: 700;
             margin-bottom: 10px;
         }

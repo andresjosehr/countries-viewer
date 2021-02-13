@@ -1,33 +1,33 @@
 <div class="container">
     <div class="content">
-        <div class="filter-box">
+        <div class="filter-box" [formGroup]='countrySearchFormGroup'>
             <div class="search-by-term">
                 <img src="assets/images/search.png" alt="search">
-                <input class="search-term-input" type="text" placeholder="Search for a country..." />
+                <input formControlName='name' class="search-term-input" type="text" placeholder="Search for a country..." />
             </div>
             <div class="search-by-region">
-                <select class="search-by-region-select">
-                    <option disabled selected>Filter by region</option>
-                    <option value="1">Opcion 1</option>
-                    <option value="2">Opcion 2</option>
-                    <option value="3">Opcion 3</option>
-                    <option value="4">Opcion 4</option>
+                <select formControlName='region' class="search-by-region-select">
+                    <option value='false'>Filter by region</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">Americas</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
                 </select>
             </div>
         </div>
-        <div class="countries-container">
-            <app-country-card routerLink='/country/asd'></app-country-card>
-            <app-country-card></app-country-card>
-            <app-country-card></app-country-card>
-            <app-country-card></app-country-card>
-            <app-country-card></app-country-card>
-            <app-country-card></app-country-card>
-            <app-country-card></app-country-card>
-            <app-country-card></app-country-card>
-            <app-country-card></app-country-card>
-            <app-country-card></app-country-card>
-            <app-country-card></app-country-card>
-            <app-country-card></app-country-card>
+        <div 
+            class="countries-container" 
+            *ngIf='(countries$ | async); let countries'
+        >
+            <ng-container>
+                    <app-country-card
+                    class="country-card"
+                    *ngFor='let country of countries'
+                    routerLink='/country/{{country.name}}'
+                    [country]="country"
+                    ></app-country-card>
+            </ng-container>
         </div>
     </div>
 </div>

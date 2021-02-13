@@ -3,8 +3,10 @@
         <div class="app-title">
             <h1>Countries viwer</h1>
         </div>
-        <div class="theme-switcher">
-                <img src="assets/images/sun.png" alt="sun"> <span>Swich theme</span>
+        <div (click)='switchTheme()' class="theme-switcher">
+            <img *ngIf='themeSwitcher.theme=="light-theme"' src="assets/images/sun.png" alt="sun">
+            <img *ngIf='themeSwitcher.theme=="dark-theme"' src="assets/images/moon.png" alt="moon">
+             <span>Swich theme</span>
         </div>
     </div>
 </header>

@@ -1,7 +1,6 @@
 @import '/src/variables';
 
 .container{
-    background-color: $veryLightGray;
     padding: 25px 55px;
     
     .content{
@@ -27,10 +26,6 @@
                     border-radius: 5px;
                     padding: 0px 20px;
                     padding-left: 40px;
-                    color: $darkGray;
-                    -webkit-box-shadow: $boxShadow;
-                    -moz-box-shadow: $boxShadow;
-                    box-shadow: $boxShadow;
                 }
                 .search-term-input:focus{
                     outline: none;
@@ -46,10 +41,8 @@
                     border: none;
                     border-radius: 5px;
                     padding: 0px 20px;
-                    background-color: $white;
-                    -webkit-box-shadow: $boxShadow;
-                    -moz-box-shadow: $boxShadow;
-                    box-shadow: $boxShadow;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
                 }
                 .search-by-region-select:focus{
                     outline: none;
@@ -58,7 +51,6 @@
                     border: none;
                     outline: none;
                     border-radius: 5px;
-                    background-color: $white;
                     height: 40px;
                     
                 }
@@ -75,11 +67,12 @@
                 transition: transform 200ms;
                 cursor: pointer;
                 outline: none!important;
+                transition: transform 200ms !important;
             }
 
             app-country-card:hover{
-                transform: translateY(-5px);
-                transition: transform 200ms;
+                transform: translateY(-5px) !important;
+                transition: transform 200ms !important;
             }
         }
     }
