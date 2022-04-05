@@ -22,7 +22,7 @@ export class CountriesService {
   }
 
   getCountryByName(name: String): Observable<Country>{
-      return this.httpClient.get<Array<Country>>(`${environment.apiUrl}/name/${name}`).pipe(
+      return this.httpClient.get<Array<Country>>(`${environment.apiUrl}/alpha/${name}`).pipe(
         map((item) => item[0])
       )
   }

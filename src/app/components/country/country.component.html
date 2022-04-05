@@ -6,19 +6,19 @@
         <div class="country-container">
             <div class="country-flag">
                 <div class="image-container">
-                    <img [src]="country.flag" alt="flag">
+                    <img [src]="country.flags.png" alt="flag">
                 </div>
             </div>
             <div class="country-info">
                 <div class="country-info-box">
                     <div class="title">
-                        <h1>{{country.name}}</h1>
+                        <h1>{{country.name.official}}</h1>
                     </div>
                     <div class="description">
                         <div>
                             <div class='label-value-container'>
                                 <span  class='label'>Native Name: </span>
-                                <span  class='value'>{{country.nativeName}}</span>
+                                <span  class='value'>{{country.name.common}}</span>
 
                             </div>
                             <div class='label-value-container'>
@@ -40,19 +40,14 @@
                         </div>
                         <div>
                             <div class='label-value-container'>
-                                <span class='label'>Top Level Domain: </span>
-                                <span class='value'>{{country.topLevelDomain[0]}}</span>
-                            </div>
-                            <div class='label-value-container'>
-                                <span class='label'>Currencies: </span>
-                                <span class='value'>{{country.currencies[0].name}}</span>
+                                <span class='label'>Area: </span>
+                                <span class='value'>{{country.area}}</span>
                             </div>
                             <div class='label-value-container'>
                                 <span  class='label'>Languages: </span>
                                 <span  class='value'>
-                                    <ng-container *ngIf='country.languages[0]'>{{country.languages[0].name}}</ng-container>
-                                    <ng-container *ngIf='country.languages[1]'>{{country.languages[1].name}}</ng-container>
-                                    <ng-container *ngIf='country.languages[2]'>{{country.languages[2].name}}</ng-container>
+                                  <ng-container *ngIf='country.languages.spa'>{{country.languages.spa}}</ng-container>
+                                  <ng-container *ngIf='country.languages.eng'>{{country.languages.eng}}</ng-container>
                                 </span>
                             </div>
                         </div>
@@ -60,9 +55,9 @@
                     <div class="borders">
                         <span class="border-text">Border Countries: </span>
                         <div class="btn-borders">
-                            <a *ngIf='country.borders[0]'>{{country.borders[0]}}</a>
-                            <a *ngIf='country.borders[1]'>{{country.borders[1]}}</a>
-                            <a *ngIf='country.borders[2]'>{{country.borders[2]}}</a>
+                            <a *ngFor="let border of country.borders">
+                              {{border}}
+                            </a>
                         </div>
                     </div>
                 </div>
